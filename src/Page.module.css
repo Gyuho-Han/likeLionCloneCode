@@ -1,0 +1,548 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./assets/font/PretendardVariable.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+*{
+    font-family: 'Pretendard';
+    font-weight: 300;
+}
+
+.header{
+    background-color: black;
+    color:aliceblue;
+    padding: 10px;
+    text-align: right;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.logoText{
+    z-index: 99;
+}
+
+.menuBtn{
+    opacity: 0;
+    cursor: default;
+    pointer-events: none;
+    z-index: 99;
+}
+
+.contentContainer{
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 15px;
+    overflow: auto; 
+    transition: all 0.5s ease;
+}
+
+.pageContainer{
+    display: flex;
+    height: 100vh;
+    transition: all 0.5s ease;
+}
+
+.sidebarContainer{
+    background-color: white;
+    width: 400px;   
+
+    transition: transform 0.5s ease, opacity 0.5s ease, width 0.5s ease;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.sidebarTop{
+    border-bottom: 1px solid #f1f1f1;
+    padding: 20px;
+    display: flex;
+
+    align-items: flex-end;  
+    justify-content: space-between;
+}
+
+.sidebarTopLeft{
+    flex: 1;
+}
+
+.sidebarTopRight{
+    flex: 3;
+    align-items: center;
+    font-weight: 100;
+    margin-left: 20px;
+}
+
+.sidebarGreeting{
+    padding-bottom: 15px;
+}
+
+.sidebarIcon{
+    padding: 10px 15px 10px 15px;
+}
+
+.sidebarIcon:hover{
+    background-color: #cccccc;
+    cursor: pointer;
+}
+
+.userName{
+    font-weight: 370;
+    margin-left: 3px;
+}
+
+.sidebarCloseMenu{
+    display: none;
+}
+
+.sidebarContents{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebarContents:hover{
+    background-color: #cccccc;
+    cursor: pointer;
+}
+
+.sidebarContentsFirst{
+    padding: 10px;
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebarContentsFirst:hover{
+    background-color: #cccccc;
+    color: black;
+    cursor: pointer;
+}
+
+.myDashboard{
+    font-size: 20px;
+}
+
+.sidebarTitle{
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.image{
+    color:white;
+    width: 50px;
+    height: 50px;
+}
+
+.cardsContainer{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.card{
+    border-color: black;
+    width: 25%;
+    height: 100px;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.cardNum{
+    font-size: 25px;
+}
+
+.cardImgNum{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+.generalStatsContainer{
+    margin-top: 50px;
+}
+
+.moreCountriesBtn{
+    display: inline-block;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #616161;
+    color: white;
+    cursor: pointer;
+}
+
+.moreCountriesBtn:hover{
+    background-color: #cccccc;
+    color: black;
+    cursor: pointer;
+}
+
+.profileImg{
+    width: 45px;
+    border-radius: 50%;
+}
+
+.regionFeedContainer{
+    display: flex;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.regionContainer{
+    flex: 3.3;
+}
+
+.regionImg{
+    width: 100%;
+}
+
+.feedsContainer{
+    flex: 6.7;
+    width: calc(100% - 15px);
+}
+
+.feedW{
+    background-color: white;
+    width: auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feedContent {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    margin-left: 8%; 
+}
+
+.feedContent span:first-child {
+    flex: 1;
+}
+
+.feedTime{
+    white-space: nowrap;
+    margin-right: 7%;
+}
+
+.feedG{
+    background-color: #f1f1f1;
+    width: auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.countriesW{
+    background-color: white;
+    width: auto;
+    padding: 9px 0 9px 15px;
+    border: 1px solid #cccccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.countriesW:hover{
+    background-color: #cccccc;
+}
+
+.countriesG{
+    background-color: #f1f1f1;
+    width: auto;
+    padding: 9px 0 9px 15px;
+    border: 1px solid #cccccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.countriesG:hover{
+    background-color: #cccccc;
+}
+
+.percentage{
+    flex: 2;
+}
+
+.country{
+    flex: 5;
+}
+
+.recentUsersContainer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.recentUser{
+    padding: 15px;
+    background-color: white;
+    border-bottom: 1px solid #cccccc;
+    display: flex;
+    align-items: center; 
+    font-size: 25px;
+}
+
+.recentUsersBox{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.recentUserProfileImg{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.feedTime{
+    font-style: italic;
+}
+
+.feedContent{
+    padding: 10px;
+}
+
+.blueColor{
+    color: #2196f3;
+}
+
+.redColor{
+    color: #f44336;
+}
+
+.greenColor{
+    color: #4caf50;
+}
+
+.yellowColor{
+    color: #ff9800;
+}
+
+.barGraph{
+    display: flex;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.firstBarLeft{
+    flex: 1;
+    background-color: #4caf50;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.firstBarRight{
+    flex: 3;
+    background-color: #9e9e9e;
+}
+
+.secondBarLeft{
+    flex: 1;
+    background-color: #ff9800;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.secondBarRight{
+    flex: 1;
+    background-color: #9e9e9e;
+}
+
+.thirdBarLeft{
+    flex: 3;
+    background-color: #f44336;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.thirdBarRight{
+    flex: 1;
+    background-color: #9e9e9e;
+}
+
+.commentProfile{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.commentContainer{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.commentImgTextContainer{
+    justify-content: center;
+}
+
+.commentImage{
+    flex: 1;
+}
+
+.commentText{
+    flex: 4;
+    margin-top: 15px;
+}
+
+.commentUserName{
+    font-size: 20px;
+}
+
+.commentDate{
+    font-size: 15px;
+    font-weight: 150;
+}
+
+.commentTop{
+    margin-bottom: 20px;
+}
+
+.footer{
+    background-color: #616161;
+    color: white;
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    margin: 0 -20px;
+    gap: 30px;
+}
+
+.imageSize{
+    font-size: 40px;
+}
+
+.footerText{
+    flex: 1;
+    padding-bottom: 30px;
+}
+
+.footerTitle{
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.titleMid{
+    margin: 20px 0;
+}
+
+.titleLast{
+    margin-top: 20px;
+}
+
+.footerFooter{
+    padding: 30px 0 60px 0;
+
+    a{
+        text-decoration: underline;
+        color: black;
+    }
+}
+
+.footerFooterTitle{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.open ~ .overlay {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 50;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .open{
+        transform: translateX(0);
+        opacity: 1;
+        width: 300px;
+    }
+
+    .sidebarContainer{
+        position: fixed;
+        width: 300px;
+        z-index: 99;
+    }
+
+    .closed{
+        transform: translateX(-350%);
+        opacity: 0;
+        width: 0;
+    }
+
+    .menuBtn{
+        opacity: 1;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    .sidebarCloseMenu{
+        display: block;
+        padding: 20px 10px 20px 10px;
+        background-color: #616161;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .sidebarCloseMenu:hover{
+        background-color: black;
+    }
+
+    @media (max-width: 600px){
+        .cardsContainer{
+            display: block;
+            width: 100%;
+        }
+
+        .card{
+            width: calc(100% - 30px);
+        }
+
+        .regionFeedContainer{
+            display: block;
+            margin-top: 30px;
+            gap: 0px;
+        }
+        
+        .regionContainer{
+            width: 100%;
+        }
+        
+        .feedsContainer{
+            width: 100%;
+        }
+
+        .commentContainer{
+            display: block;
+            margin-bottom: 40px;
+        }
+        
+        .commentText{
+            margin-left: 20px;
+        }
+
+       .footer{
+            display: block;
+       } 
+    }
+}
