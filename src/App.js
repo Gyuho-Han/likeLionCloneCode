@@ -1,5 +1,5 @@
 import styles from "./Page.module.css"
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import ProfileImg from "./assets/avatar2.png";
 import MapImg from "./assets/region.jpg";
 import BlueProfileImg from "./assets/avatar3.png";
